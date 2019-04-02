@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "note-app-elements": "polymerlabs/note-app-elements",
+    "polymerfire": "firebase/polymerfire"
+  }
+}
