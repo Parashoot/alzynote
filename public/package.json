@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@polymer/app-media": "^3.0.1",
     "note-app-elements": "polymerlabs/note-app-elements",
     "polymerfire": "firebase/polymerfire"
   }
