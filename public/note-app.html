@@ -1,6 +1,9 @@
 <link rel="import" href="bower_components/note-app-elements/na-elements.html">
 <link rel="import" href="bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
 <link rel="import" href="bower_components/polymerfire/polymerfire.html">
+<script type="module">
+  import '@polymer/app-media/app-media-devices.js';
+</script>
 
 <dom-module id="note-app">
   <template>
@@ -39,10 +42,11 @@
         persisted-data="{{persistedData}}">
     </app-indexeddb-mirror>
 
-    <paper-fab icon="camera-enhance" on-tap="create" class="record-button"></paper-fab>
+
+    <paper-fab icon="camera-enhance" on-tap="" class="record-button"></paper-fab>
     <paper-fab icon="create" on-tap="create" class="write-button"></paper-fab>
-    <paper-fab icon="file-upload" on-tap="create" class="upload-button"></paper-fab>
-    <paper-fab icon="favorite" on-tap="create" class="check-button"></paper-fab>
+    <paper-fab icon="file-upload" on-tap="" class="upload-button"></paper-fab>
+    <paper-fab icon="favorite" on-tap="" class="check-button"></paper-fab>
 
     <div class="notes">
       <template is="dom-repeat" items="[[persistedData]]" as="note">
