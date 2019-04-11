@@ -99,20 +99,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
     <template is="dom-if" if="[[editable]]">
-      <iron-input bind-value="{{title}}">
+      <iron-input bind-value="{{type}}">
         <input is="iron-input"
-            placeholder="Title"
-            bind-value="{{title}}">
+            placeholder="Type"
+            bind-value="{{type}}">
+        </input>
+      </iron-input>
+      <iron-input bind-value="{{trigger}}">
+        <input is="iron-input"
+            placeholder="Trigger"
+            bind-value="{{trigger}}">
         </input>
       </iron-input>
       <iron-autogrow-textarea
-          placeholder="Note"
-          bind-value="{{body}}">
+          placeholder="Memory"
+          bind-value="{{memory}}">
       </iron-autogrow-textarea>
     </template>
     <template is="dom-if" if="[[!editable]]">
-      <h1 class$="[[emptyClass(title)]]">[[title]]</h1>
-      <p class$="[[emptyClass(body)]]">[[body]]</p>
+      <h1 class$="[[emptyClass(type)]]">[[type]]</h1>
+      <h1 class$="[[emptyClass(trigger)]]">[[trigger]]</h1>
+      <p class$="[[emptyClass(memory)]]">[[memory]]</p>
+
     </template>
 
   </template>
@@ -127,13 +135,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           value: false
         },
 
-        title: {
+        type: {
+          type: String,
+          notify: true,
+          value: ''
+        },
+        trigger: {
           type: String,
           notify: true,
           value: ''
         },
 
-        body: {
+        memory: {
           type: String,
           notify: true,
           value: ''

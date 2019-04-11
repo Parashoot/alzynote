@@ -85,7 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
     <div id="background"></div>
-    <na-note id="note" title="{{note.title}}" body="{{note.body}}" editable></na-note>
+    <na-note id="note" type="{{note.type}}" trigger="{{note.trigger}}" memory="{{note.memory}}" editable></na-note>
     <div class="controls">
       <paper-button on-tap="delete">Delete</paper-button>
       <paper-button on-tap="save">Done</paper-button>

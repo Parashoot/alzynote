@@ -80,8 +80,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       save: function() {
         if (this.$.document.isNew &&
-            (this.editableNote.title ||
-             this.editableNote.body)) {
+            (this.editableNote.type ||
+             this.editableNote.trigger||
+             this.editableNote.memory)) {
           return this.$.document.saveValue(this.notesPath).then(function() {
             this.$.document.reset();
           }.bind(this));

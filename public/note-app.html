@@ -52,8 +52,9 @@
       <template is="dom-repeat" items="[[persistedData]]" as="note">
         <na-note
             id$="[[note.$key]]"
-            title="[[note.title]]"
-            body="[[note.body]]"
+            type="[[note.type]]"
+            trigger="[[note.trigger]]"
+            memory="[[note.memory]]"
             on-tap="edit">
         </na-note>
       </template>
