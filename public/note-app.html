@@ -5,7 +5,7 @@
 <dom-module id="note-app">
   <template>
     <style include="note-app-shared-styles"></style>
-
+    
     <na-toolbar
         signed-in="[[signedIn]]"
         on-sign-out="signOut">
@@ -39,6 +39,11 @@
         persisted-data="{{persistedData}}">
     </app-indexeddb-mirror>
 
+    <paper-fab icon="camera-enhance" on-tap="create" class="record-button"></paper-fab>
+    <paper-fab icon="create" on-tap="create" class="write-button"></paper-fab>
+    <paper-fab icon="file-upload" on-tap="create" class="upload-button"></paper-fab>
+    <paper-fab icon="favorite" on-tap="create" class="check-button"></paper-fab>
+
     <div class="notes">
       <template is="dom-repeat" items="[[persistedData]]" as="note">
         <na-note
@@ -49,9 +54,7 @@
         </na-note>
       </template>
     </div>
-
-    <paper-fab icon="add" disabled="[[!online]]" on-tap="create"></paper-fab>
-
+    
     <firebase-document
         id="document"
         app-name="AlzyNote"
